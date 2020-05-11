@@ -1,0 +1,69 @@
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "poem")
+
+public class Poem {
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
+    @ColumnInfo(name = "poemId")
+    private int mId;
+
+    @Nullable
+    @ColumnInfo(name = "poemName")
+    private String mTitle;
+
+    public int getId() {
+        return mId;
+    }
+
+    public void setId(@NonNull int id) {
+        mId = id;
+    }
+
+    public String getTitle() {
+        return mTitle;
+    }
+
+    public void setTitle(@Nullable String title) {
+        mTitle = title;
+    }
+
+    public String getAuthor() {
+        return mAuthor;
+    }
+    public void setAuthor(String author) {
+        mAuthor = author;
+    }
+
+    public String getCreationDate() {
+        return mCreationDate;
+    }
+
+    public void setCreationDate(String creationDate) {
+        mCreationDate = creationDate;
+    }
+
+    private String mAuthor;
+    private String mCreationDate;
+    public int getScore() {
+        return mScore;
+    }
+
+    public void setScore(int score) {
+        mScore = score;
+    }
+
+    private int mScore;
+
+    public Poem(String title, String author, int score, String creationDate) {
+       mId = id
+        mTitle = title;
+        mAuthor = author;
+        mScore = score;
+        mCreationDate = creationDate;
+    }
+}
