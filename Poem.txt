@@ -60,7 +60,7 @@ public class Poem {
     private int mScore;
 
     public Poem(String title, String author, int score, String creationDate) {
-       mId = id
+//nao é necessário. Id é autonumerado
         mTitle = title;
         mAuthor = author;
         mScore = score;
